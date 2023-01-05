@@ -1,0 +1,50 @@
+var Stud1 = {
+    Name: 'Ram',
+    Course: 'MBA',
+    Marks: [
+      {subject:'Finance', Mark:66},
+      {subject:'HR', Mark:80},
+      {subject:'IFA', Mark:70},
+      {subject:'Business',Mark:71}
+      //{subject:'Stat',Mark:76}
+    ]
+  }
+  var Stud2 = {
+    Name: 'Venky',
+    Course: 'MBA',
+    Marks: [
+      {subject:'Finance', Mark:70},
+      {subject:'HR', Mark:75},
+      {subject:'IFA', Mark:78},
+      {subject:'Business',Mark:76}
+      //{subject:'Stat',Mark:86}
+    ]
+  }
+  
+  var totalinmarks = 400
+  var percentage
+  var totalmarksstud1 = 0
+  var stud1marks = Stud1.Marks
+  var GoodStudent
+  for(let i=0;i<stud1marks.length;i++){
+    totalmarksstud1 = totalmarksstud1+ stud1marks[i].Mark
+  }
+  console.log('Total Marks of -'+ Stud1.Name+'-' +totalmarksstud1 )
+
+  var totalmarksstud2 = 0
+  var stud2marks = Stud2.Marks
+  for(let j=0;j<stud2marks.length;j++){
+    totalmarksstud2 = totalmarksstud2+ stud2marks[j].Mark
+  }
+  console.log('Total Marks of -'+Stud2.Name+'-'+totalmarksstud2 )
+
+  if(totalmarksstud1>totalmarksstud2){
+    percentage =((totalmarksstud1/totalinmarks)*100);
+    //GoodStudent = Stud1.Name
+    console.log('Score of Candidate - '+Stud1.Name+'-' +percentage+'%')
+  }
+  else{
+    percentage =((totalmarksstud2/totalinmarks)*100);
+    //GoodStudent = Stud2.Name
+    console.log('Score of Candidate - '+Stud2.Name+'-' +percentage+'%')
+  }
